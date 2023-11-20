@@ -3,9 +3,9 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className='h-[25vh] w-screen flex flex-col justify-center items-center gap-4 bg-old-lace' aria-label='footer menu'>
-      <a href="/"><h1 className='text-4xl text-purple font-bold uppercase' title='Home'>Boundless Courage, Inc</h1></a>
-      <ul className='flex gap-4 text-lg'>
+    <footer className='h-[50vh] sm:h-[25vh] md:h-[20vh] lg:h-[30vh] w-screen px-8 flex flex-col justify-center items-center gap-4 bg-old-lace' aria-label='footer menu'>
+      <a href="/"><h1 className='text-xl sm:text-3xl md:text-4xl lg:text-5xl text-purple font-bold uppercase' title='Home'>boundless courage, inc</h1></a>
+      <ul className='flex flex-col sm:flex-row justify-center items-center gap-4 text-lg'>
         <Link href='#our-story'><li className='hover:text-purple transition linear duration-300' title='Our Story'>Our Story</li></Link>
         <Link href='#events-home'><li className='hover:text-purple transition linear duration-300' title='Events'>Events</li></Link>
         <Link href='#tims'><li className='hover:text-purple transition linear duration-300' title='T.I.M.S.'>T.I.M.S.</li></Link>

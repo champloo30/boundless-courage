@@ -1,28 +1,30 @@
-import Link from 'next/link'
 import React from 'react'
 
 interface ButtonProps {
   children: React.ReactNode,
-  mainColor: string,
-  secondaryColor: string,
+  color: string,
   link?: boolean,
   href: string,
-  target?: string
+  target?: string,
+  name: string
 }
 
 const Button: React.FC<ButtonProps> = ({
   children,
-  mainColor,
-  secondaryColor,
+  color,
   link,
   href,
-  target
+  target,
+  name
 }) => {
   return (
     <>
-      {link ? 
-      <button className={`h-16 w-36 text-4xl text-${mainColor} border-4 border-${mainColor} hover:bg-${mainColor} hover:text-${secondaryColor} transition linear duration-500`} type='button'><a href={href} target={target}>{children}</a></button> :
-      <button className={`h-16 w-36 text-4xl text-${mainColor} border-4 border-${mainColor} hover:bg-${mainColor} hover:text-${secondaryColor} transition linear duration-500`} type='button'><a href={`mailto:${href}`}>{children}</a></button>
+      {color === 'purple' ? link ? 
+      <button className={`h-12 lg:h-16 w-28 lg:w-36 text-2xl lg:text-4xl text-purple border-[3px] lg:border-4 border-purple hover:bg-purple hover:text-old-lace transition linear duration-500`} type='button' title={`Go to ${name}`}><a href={href} target={target}>{children}</a></button> :
+      <button className={`h-12 lg:h-16 w-28 lg:w-36 text-2xl lg:text-4xl text-purple border-[3px] lg:border-4 border-purple hover:bg-purple hover:text-old-lace transition linear duration-500`} type='button' title={`Email ${name}`}><a href={`mailto:${href}`}>{children}</a></button> :
+      link ? 
+      <button className={`h-12 lg:h-16 w-28 lg:w-36 text-2xl lg:text-4xl text-old-lace border-[3px] lg:border-4 border-old-lace hover:bg-old-lace hover:text-purple transition linear duration-500`} type='button' title={`Go to ${name}`}><a href={href} target={target}>{children}</a></button> :
+      <button className={`h-12 lg:h-16 w-28 lg:w-36 text-2xl lg:text-4xl text-old-lace border-[3px] lg:border-4 border-old-lace hover:bg-old-lace hover:text-purple transition linear duration-500`} type='button' title={`Email ${name}`}><a href={`mailto:${href}`}>{children}</a></button>
       }
     </>
   )
