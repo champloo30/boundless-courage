@@ -3,7 +3,7 @@ import Link from 'next/link'
 
 const TopNav = (props: any) => {
   return (
-    <nav className='fixed h-[70px] w-screen z-10 px-8 lg:px-16 flex justify-between items-center bg-old-lace drop-shadow-lg' aria-label='Navigation Menu'>
+    <nav className='fixed h-[70px] w-screen z-10 px-8 tall:px-12 lg:px-16 flex justify-between items-center bg-old-lace drop-shadow-lg' aria-label='Navigation Menu'>
       <a href="/"><h1 className='text-lg md:text-2xl lg:text-4xl text-purple font-bold uppercase' title='Home'>Boundless Courage</h1></a>
       <svg className='h-7 w-7 lg:hidden cursor-pointer' viewBox="0 0 24 24" fill="none" onClick={() => props.setOpenMenu(true)}>
         <path fill-rule="evenodd" clip-rule="evenodd" d="M20.75 7C20.75 7.41421 20.4142 7.75 20 7.75L4 7.75C3.58579 7.75 3.25 7.41421 3.25 7C3.25 6.58579 3.58579 6.25 4 6.25L20 6.25C20.4142 6.25 20.75 6.58579 20.75 7Z" fill="#1C274C"/>

@@ -16,6 +16,9 @@ const config: Config = {
         'purple': '#622C62',
         'purple-dark': '#371737'
       },
+      screens: {
+        'tall': { 'raw': '(min-height: 1300px)'},
+      }
     },
   },
   plugins: [],

@@ -3,7 +3,7 @@ import React from 'react'
 
 const SideMenu = (props: any) => {
   return (
-    <aside className={ props.openMenu === true ? `fixed h-screen w-screen z-20 flex flex-col justify-center items-center bg-old-lace/90 transition translate-x-0 ease-out duration-500` : `fixed h-screen w-screen z-20 bg-old-lace/90 transition translate-x-[100vw] ease-out duration-500`}>
+    <aside className={ props.openMenu === true ? `fixed h-screen w-screen z-20 flex flex-col justify-center items-center bg-old-lace/90 transition translate-x-0 ease-out duration-500` : `fixed h-screen w-screen z-20 bg-old-lace/0 transition translate-x-[100vw] ease-out duration-500`} aria-label='side menu for mobile'>
       <ul className='h-screen w-screen flex flex-col justify-center items-center gap-12 text-2xl'>
         <li>
           <svg className='h-7 w-7 cursor-pointer' viewBox="-0.5 0 25 25" xmlns="http://www.w3.org/2000/svg" onClick={() => props.setOpenMenu(false)}>
