@@ -9,6 +9,7 @@ import TIMS from "@/components/homepage/tims";
 import ContactUs from "@/components/homepage/contactUs";
 import Footer from "@/components/nav/footer";
 import SideMenu from "@/components/nav/sideMenu";
+import Skip from '@/components/nav/skip';
 
 export default function Home() {
   const [openMenu, setOpenMenu] = useState(false)
@@ -16,10 +17,11 @@ export default function Home() {
   return (
     <>
       <header className="relative">
+        <Skip />
         <TopNav openMenu={openMenu} setOpenMenu={setOpenMenu} />
         <SideMenu openMenu={openMenu} setOpenMenu={setOpenMenu} />
       </header>
-      <main className="scroll-smooth">
+      <main id='main-content' className="scroll-smooth">
         <Hero />
         <OurStory />
         <EventsHome />

@@ -17,7 +17,7 @@ const config: Config = {
         'purple-dark': '#371737'
       },
       screens: {
-        'tall': { 'raw': '(min-height: 1300px)'},
+        'tall': { 'min': '(min-height: 1300px)', 'max': '(max-width: 1100px)' },
       }
     },
   },
